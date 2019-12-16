@@ -1,0 +1,154 @@
+.input-icons i {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.profile_in_feild {
+    text-indent: 30px;
+    height: 20px;
+}
+
+.profile_ta {
+    text-indent: 30px;
+    height: 20px;
+}
+
+.profile_opt {
+    text-indent: 30px;
+    height: 20px;
+}
+
+.bodyimage {
+    background-image: url(/images/edit-profile-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 900px;
+    background-position: center center;
+
+}
+
+.background-white {
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 60px;
+    padding-bottom: 50px;
+    background-color: white;
+    border-radius: 25px;
+    margin-bottom: 80px;
+    margin-top: 80px;
+}
+
+.create {
+    text-align: center;
+}
+
+.user-icon {
+    display: inline-block;
+    border-radius: 60px;
+    box-shadow: 0px 0px 2px white;
+    padding: 0.5em 0.6em;
+}
+
+
+.user-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.create {
+    text-decoration: none;
+}
+
+.container-size {
+    height: 100vh;
+}
+
+.row-size {
+    height: 100vh;
+}
+
+.center-position {
+    margin: auto;
+}
+
+.form-rounded {
+    border-radius: 15px !important;
+    resize: none;
+    appearance: none;
+}
+
+.select-rounded {
+    border-radius: 20px !important;
+    resize: none;
+    -webkit-appearance: none;
+}
+
+.upload-photo {
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: 1px solid #ced4da;
+    border-radius: 1.5em;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: #495057;
+}
+
+.upload-photo:hover {
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: 1px solid #ced4da;
+    border-radius: 1.5em;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: white;
+    background-color: #8f959b;
+}
+
+.fa-circle {
+    color: #5e6368;
+}
+
+.decor-none {
+    text-decoration: none;
+    color: black !important;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between !important;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.logo {
+    height: 40px;
+}
+
+.dropdown-toggle::after { 
+    content: none; 
+}
+
+.fa-user {
+    color: black;
+}
+
+.circular-landscape {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+  
+.circular-landscape img {
+    width: auto;
+    height: 100%;
+    margin-left: -50px;
+}
+

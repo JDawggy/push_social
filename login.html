@@ -1,0 +1,88 @@
+
+<html>
+        <head>
+        
+            <title></title>
+    
+            
+            <link rel="stylesheet" href="/login-register-styles.css">
+    
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+    
+            <script src="https://kit.fontawesome.com/ea81b73834.js" crossorigin="anonymous"></script>
+    
+    
+        </head>
+        <body>
+            <div class="container container-size">
+    
+                <div class="row row-size">
+
+                    <div class="col-1"></div>
+
+                    <div class="col-10 center-position">
+    
+                        <div class="background-none">
+
+
+                            <div class="row">
+                                <span class="mb-4 user-center">
+                                    <i class="fas fa-user-circle fa-5x"></i>
+                                </span>
+                            </div>
+
+                               
+                            
+                            <!-- Register form  -->
+                            <form action="register.php" method="POST"> 
+                
+                
+                
+                                <!-- Email -->
+                                <div class="row">
+                                    <div class="col-md-3"></div>
+                                    <div class="form-group col-md-6"> 
+                                        <div class="input-icons">
+                                            <i class="fas fa-envelope"></i>
+                                            <input class="rounded-pill form-control" type="email" name="reg_em" placeholder="Email" value="" required>                 
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3"></div>
+                                </div> <!-- end of row -->
+                                
+                            
+                                <!-- Password -->
+                                <div class="row">
+                                    <div class="col-md-3"></div>
+                                    <div class="form-group col-md-6">                                              
+                                        <div class="input-icons">
+                                            <i class="fa fa-lock"></i>
+                                            <input class="rounded-pill form-control" type="password" name="reg_password" placeholder="Password" value="" required>          
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3"></div>
+                                </div> <!-- end of row -->
+                                
+                
+                                <!-- Sumbit button for login form -->
+                                <div class="row">
+                                    <div class="col-md-3"></div>
+                                    <div class="form-group col-md-6"> 
+                                        <button class="btn btn-warning rounded-pill form-control mb-2" type="submit" name="register_button" value="register">Login</button>
+                                        <a href="" class="create text-warning text-center">Create an Account!</a>
+                                        
+                                    </div>
+                                    
+                                    <div class="col-md-3"></div>
+                                </div>
+                
+                            </form> <!-- login form -->
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+                
+                
+            </div> <!-- Container div -->
+        </body>
+    </html>

@@ -1,0 +1,173 @@
+
+<html>
+        <head>
+        
+            <title></title>
+    
+            
+            <link rel="stylesheet" href="/edit-profile-styles.css">
+    
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+    
+            <script src="https://kit.fontawesome.com/ea81b73834.js" crossorigin="anonymous"></script>
+    
+    
+        </head>
+        <body>
+            <div class="container container-size">
+    
+                <div class="row row-size">
+
+                    <div class="col-1"></div>
+                    <div class="col-10 center-position">
+    
+                        <div class="background-white">
+                            <div class="col-12">
+                                <h2 class="mb-4 create">Edit Profile</h2>
+                            </div>
+                            
+                            <!-- Register form  -->
+                            <form action="register.php" method="POST"> 
+                
+                
+                                <!-- Profile Photo -->
+                                <div class="row mb-2 mt-3">
+                                    <div class="form-group col-md-6"> 
+
+                                        <div class="row mt-4">
+
+                                            <span class="pl-1 mb-4 user-center fa-stack fa-2x">
+                                                <i class="fas fa-circle fa-stack-2x"></i>
+                                                <i class="fas fa-user fa-stack-1x fa-inverse"></i>
+                                            </span>
+                                            
+                                        </div>
+
+                                        <div class="row">
+
+                                            <label class="btn btn-default btn-file mx-auto">
+                                                 <span class="upload-photo">Upload Profile Photo</span> <input type="file" style="display: none;">
+                                            </label>
+
+                                        </div>
+
+                                        
+                                       
+                                    
+                                    </div>
+                    
+                    
+                                    <!-- Bio -->
+                                    <div class="form-group col-md-6"> 
+                                        <div class="input-icons">
+                                            <i class="fas fa-user"></i>
+                                            <textarea class="form-control form-rounded" value="" name="" id="" placeholder="Bio" cols="30" rows="7"></textarea>
+                                            
+                                        </div>
+                                    </div> <!-- end of form group -->
+                                </div> <!-- end of row -->
+                        
+                                
+                
+                
+                
+                                <!-- First Name -->
+                                <div class="row mb-2">
+                                    <div class="form-group col-md-6"> 
+                                        <div class="input-icons">
+                                            <i class="fas fa-signature"></i>
+                                            <input class="rounded-pill form-control" type="text" name="" placeholder="First Name" value="" required>                 
+                                        </div>
+                                    </div>
+                    
+                                
+                                    <!-- Last Name -->
+                                    <div class="form-group col-md-6"> 
+                                        <div class="input-icons">
+                                            <i class="fas fa-signature"></i>
+                                            <input class="rounded-pill form-control" type="text" name="" placeholder="Last Name" value="" required>  
+                                        </div>               
+                                    </div> <!-- end of form group -->
+                                </div> <!-- end of row -->
+
+
+
+
+                                <!-- Display Name -->
+                                <div class="row mb-2">
+                                    <div class="form-group col-md-6"> 
+                                        <div class="input-icons">
+                                            <i class="fas fa-user-friends"></i>
+                                            <input class="rounded-pill form-control" type="text" name="" placeholder="Display Name" value="" required>                 
+                                        </div>
+                                    </div>
+                    
+                                
+                                    <!-- Email -->
+                                    <div class="form-group col-md-6"> 
+                                        <div class="input-icons">
+                                            <i class="fas fa-envelope"></i>
+                                            <input class="rounded-pill form-control" type="email" name="" placeholder="Email" value="" required>  
+                                        </div>               
+                                    </div> <!-- end of form group -->
+                                </div> <!-- end of row -->
+                                
+                
+                
+                                
+                            
+                                <!-- City -->
+                                <div class="row mb-">
+                                    <div class="form-group col-md-6">                                              
+                                        <div class="input-icons">
+                                            <i class="fa fa-city"></i>
+                                            <input class="rounded-pill form-control" type="text" name="reg_password" placeholder="City" value="" required>          
+                                        </div>
+                                    </div>
+                                    
+                    
+                                    <!-- Province -->
+                                    <div class="form-group col-md-6">                                               
+                                        <div class="input-icons">
+                                            <select class="form-control select-rounded">
+                                                <option selected="selected">Select Your Province</option>
+                                                <option>BC</option>
+                                                <option>Alberta</option>
+                                                <option>Saskatchewan</option>
+                                                <option>Manitoba</option>
+                                                <option>Ontario</option>
+                                                <option>Quebec</option>
+                                                <option>New Brunswick</option>
+                                                <option>Newfoundland and Labrador</option>
+                                                <option>Nova Scotia</option>
+                                                <option>Prince Edward Island</option>
+                                                <option>Northwest Territories</option>
+                                                <option>Nunavut</option>
+                                                <option>Yukon</option>
+                                            </select> 
+                                        </div>
+                                    </div> <!-- end of form group -->
+                                </div> <!-- end of row -->
+                                
+                
+                                <!-- Sumbit button for register form -->
+                                <div class="row">
+                                    <div class="col-md-3">
+                                            <!-- <button class="btn rounded-pill form-control mt-4" type="submit" name="" value="">Change Password</button> -->
+                                    </div>
+                                    <div class="form-group col-md-6 mt-4"> 
+                                        <button class="btn register-button btn-warning rounded-pill form-control" type="submit" name="register_button" value="register">Update Account</button>
+                                    </div>
+                                    <div class="col-md-3"></div>
+                                </div>
+                
+                            </form> <!-- Register form -->
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+                
+                
+            </div> <!-- Container div -->
+        </body>
+    </html>
