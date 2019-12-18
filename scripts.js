@@ -57,7 +57,7 @@ $('.clickContainer .postPhoto').click(function( e ) {
 
     e.preventDefault();
     
-    $(this).parent().find(".nameLocation, .commentSection").toggle();
+    $(this).parent().find(".nameLocation, .commentSection").slideToggle();
     
 });
 
@@ -82,12 +82,13 @@ $('.clickContainer .postPhoto').click(function( e ) {
 var showComments = false
 
 $( ".showComments" ).click(function( e ) {
-
+    e.preventDefault();
     // on click on show comments button select the ul [with and id ^that starts with = comment block] .toggle style display none
 
-    $("ul[id^='comment_block']").toggle();
+    var comment_block = $(this).data("comment_block");
+    $(comment_block).slideToggle();
 
-    e.preventDefault();
+    
 
     showComments = true;
 

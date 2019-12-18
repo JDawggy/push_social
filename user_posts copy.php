@@ -171,7 +171,7 @@ require "header.php";
 
                             <div class="row ml-2 mt-4 mr-2 mb-4">
                                 <div class="input-group mb-3 col-9">
-                                    <input type="text" class="form-control comment-input" placeholder="Leave a comment">
+                                    <input type="text" class="form-control comment-input in_index" placeholder="Leave a comment">
 
                                     <div class="input-group-append">
                                     <button class="btn btn-warning px-5 comment-button" type="button">Share</button>

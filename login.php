@@ -116,7 +116,7 @@ elseif( isset( $_POST["action"]) && $_POST["action"] == "signup" ) :
                     $_SESSION["role"] = 2;
                     $_SESSION["email"] = $email;
 
-                    header("Location: http://" . $_SERVER["SERVER_NAME"]);
+                    header("Location: http://" . $_SERVER["SERVER_NAME"] . "/index.php");
                 }
 
                 //  Successfull Submition End
@@ -157,7 +157,7 @@ if( !empty($errors) ) {
         <title></title>
 
         
-        <link rel="stylesheet" href="/login-register-styles.css">
+        <link rel="stylesheet" href="/styles.css">
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
 
@@ -166,6 +166,9 @@ if( !empty($errors) ) {
 
     </head>
     <body>
+        <div class="loginImage">
+
+        
         <div class="container container-size">
 
             <div class="row row-size">
@@ -196,7 +199,7 @@ if( !empty($errors) ) {
                                 <div class="form-group col-md-6"> 
                                     <div class="input-icons">
                                         <i class="fas fa-envelope"></i>
-                                        <input class="rounded-pill form-control" type="email" name="email" placeholder="Email" value="" required>                 
+                                        <input class="rounded-pill form-control in_log" type="email" name="email" placeholder="Email" value="" required>                 
                                     </div>
                                 </div>
                                 <div class="col-md-3"></div>
@@ -209,7 +212,7 @@ if( !empty($errors) ) {
                                 <div class="form-group col-md-6">                                              
                                     <div class="input-icons">
                                         <i class="fa fa-lock"></i>
-                                        <input class="rounded-pill form-control" type="password" name="password" placeholder="Password" value="" required>          
+                                        <input class="rounded-pill form-control in_log" type="password" name="password" placeholder="Password" value="" required>          
                                     </div>
                                 </div>
                                 <div class="col-md-3"></div>
@@ -238,5 +241,7 @@ if( !empty($errors) ) {
             
             
         </div> <!-- Container div -->
+        </div> <!-- photo background div -->
+        
     </body>
 </html>

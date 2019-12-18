@@ -31,15 +31,14 @@ if( isset($_SESSION["user_id"]) && ($_SESSION["role"] < 3) ):
     
     
     
-    
-    
-    
     // If the profile picture is set ( uploaded a file in the edit user page ) and there is no errors with the file upload
     if( isset($_FILES["uploaded_image"]) && $_FILES["uploaded_image"]["error"] == 0 ) {
         if(
             (
                 $_FILES["uploaded_image"]["type"] == "image/jpeg" ||
+                $_FILES["uploaded_image"]["type"] == "image/JPEG" ||
                 $_FILES["uploaded_image"]["type"] == "image/jpg" ||
+                $_FILES["uploaded_image"]["type"] == "image/JPG" ||
                 $_FILES["uploaded_image"]["type"] == "image/png" ||
                 $_FILES["uploaded_image"]["type"] == "image/gif"
                 ) 

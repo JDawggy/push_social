@@ -29,7 +29,7 @@ if ( $user_request = mysqli_query($conn, $user_query) ) :
         <title></title>
 
         
-        <link rel="stylesheet" href="/index-styles.css">
+        <link rel="stylesheet" href="/styles.css">
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
 
@@ -48,21 +48,22 @@ if ( $user_request = mysqli_query($conn, $user_query) ) :
             <a class="navbar-brand col-4" href="/index.php"><img class="logo" src="/images/push-logo-black.png" alt=""></a>
 
 
-            <form class="form-inline col-4 d-flex justify-content-center">
-                <div class="form-group mt-3">
-                    <div class="input-icons">
-                        <i class="fas fa-search"></i>
-                        <input class="form-control mr-sm-2 rounded-pill" type="search" placeholder="Search" aria-label="Search">
+            <div class="collapse navbar-collapse justify-content-center">
+                <form class="form-inline col-4 d-flex justify-content-center">
+
+                    <div class="form-group mt-3">
+                        <div class="input-icons">
+                            <i class="fas fa-search"></i>
+                            <input class="form-control mr-sm-2 rounded-pill in_index" type="search" placeholder="Search" aria-label="Search">
+                        </div>
+                        
                     </div>
-                    
-                </div>
     
-        
-                
-            </form>
+                </form>
+            </div>
     
             
-            <div class="collapse navbar-collapse col-4" id="navbarSupportedContent">
+            <div class="navbar col-4" id="navbarSupportedContent">
                 
                 <ul class="navbar-nav ml-auto mr-2">
                     <li class="nav-item dropdown">

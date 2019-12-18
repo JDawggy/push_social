@@ -5,7 +5,7 @@
         <title></title>
 
         
-        <link rel="stylesheet" href="/login-register-styles.css">
+        <link rel="stylesheet" href="/styles.css">
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
 
@@ -14,6 +14,7 @@
 
     </head>
     <body>
+        <div class="loginImage">
         <div class="container container-size">
 
             <div class="row row-size">
@@ -44,7 +45,7 @@
                             <div class="form-group col-md-6"> 
                                 <div class="input-icons">
                                     <i class="fas fa-user"></i>
-                                    <input class="rounded-pill form-control" type="text" name="first_name" placeholder="First Name" value="" required>                
+                                    <input class="rounded-pill form-control in_log" type="text" name="first_name" placeholder="First Name" value="" required>                
                                 </div>
                             </div>
             
@@ -53,7 +54,7 @@
                             <div class="form-group col-md-6"> 
                                 <div class="input-icons">
                                     <i class="fas fa-user"></i>
-                                    <input class="rounded-pill form-control" type="text" name="last_name" placeholder="Last Name" value="" required>
+                                    <input class="rounded-pill form-control in_log" type="text" name="last_name" placeholder="Last Name" value="" required>
                                 </div>
                             </div> <!-- end of form group -->
                             </div> <!-- end of row -->
@@ -67,7 +68,7 @@
                             <div class="form-group col-md-6"> 
                                 <div class="input-icons">
                                     <i class="fas fa-envelope"></i>
-                                    <input class="rounded-pill form-control" type="email" name="email" placeholder="Email" value="" required>                 
+                                    <input class="rounded-pill form-control in_log" type="email" name="email" placeholder="Email" value="" required>                 
                                 </div>
                             </div>
             
@@ -76,7 +77,7 @@
                             <div class="form-group col-md-6"> 
                                 <div class="input-icons">
                                     <i class="fas fa-envelope"></i>
-                                    <input class="rounded-pill form-control" type="email" name="email2" placeholder="Confirm Email" value="" required>  
+                                    <input class="rounded-pill form-control in_log" type="email" name="email2" placeholder="Confirm Email" value="" required>  
                                 </div>               
                             </div> <!-- end of form group -->
                             </div> <!-- end of row -->
@@ -90,7 +91,7 @@
                             <div class="form-group col-md-6">                                              
                                 <div class="input-icons">
                                     <i class="fa fa-lock"></i>
-                                    <input class="rounded-pill form-control" type="password" name="password" placeholder="Password" value="" required>          
+                                    <input class="rounded-pill form-control in_log" type="password" name="password" placeholder="Password" value="" required>          
                                 </div>
                             </div>
                             
@@ -99,7 +100,7 @@
                             <div class="form-group col-md-6">                                               
                                 <div class="input-icons">
                                     <i class="fa fa-lock"></i>
-                                    <input class="rounded-pill form-control" type="password" name="password2" placeholder="Confirm Password" value="" required>  
+                                    <input class="rounded-pill form-control in_log" type="password" name="password2" placeholder="Confirm Password" value="" required>  
                                 </div>
                             </div> <!-- end of form group -->
                             </div> <!-- end of row -->
@@ -133,5 +134,7 @@
             
             
         </div> <!-- Container div -->
+        </div> <!-- photo div -->
+        
     </body>
 </html>

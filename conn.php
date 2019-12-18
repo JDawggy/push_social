@@ -1,8 +1,8 @@
 <?php
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 
 if(!isset($_SESSION)) { // Starts a session to pass session variables
     session_start(); 
@@ -10,7 +10,7 @@ if(!isset($_SESSION)) { // Starts a session to pass session variables
 
 // $conn = mysqli_connect("localhost", "root", "root", "push");
 
-if( $_SERVER["SERVER_NAME"] == "justalex.justjordan.ca") {
+if( $_SERVER["SERVER_NAME"] == "justjordan.ca") {
     // PRODUCTION - connects to plesk database
     
                         // localhost, database username, password, database name

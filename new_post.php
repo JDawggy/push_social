@@ -23,7 +23,7 @@ include_once("header.php");
 
             <div class="input-icons">
 
-                <input type="text" name="location" id="location" placeholder="Location" class="form-control rounded-pill"> 
+                <input type="text" name="location" id="location" placeholder="Location" class="form-control rounded-pill in_index"> 
                 <icon class="fas fa-map-marker-alt icon"></icon>
             </div>
 
@@ -36,7 +36,7 @@ include_once("header.php");
             <label class="btn btn-default btn-file mx-auto">
 
                 <span class="upload-photo">Upload New Photo</span> 
-                <input type="file" name="uploaded_image"  onchange="displayImage(this)" id="uploadedImage" style="display: none;">
+                <input class="in_index" type="file" name="uploaded_image"  onchange="displayImage(this)" id="uploadedImage" style="display: none;">
             </label>
            
         </div>
@@ -49,7 +49,7 @@ include_once("header.php");
 
         
 
-        <button class="btn-warning thiccbtn" name="action" value="publish">Share!</button>
+        <button class="btn-warning thiccbtn rounded-pill" name="action" value="publish">Share!</button>
 
 
 

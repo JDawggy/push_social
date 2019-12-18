@@ -4,7 +4,9 @@ require "header.php";
 
 // $article_row and stuff is a post row if its matched the database names
 
-
+if(!isset($_SESSION["user_id"])){
+    header("Location: http://" . $_SERVER["SERVER_NAME"] . "/login.php"); //. "login.php" to get to a diffrent page and remove the ) after SERVER_NAME]
+} 
 
 ?>
 
@@ -94,7 +96,7 @@ require "header.php";
                 
                 $article_query = "  SELECT posts.place, posts.author_id, posts.date_created, posts.id,
                                             photos.url AS featured_image,
-                                            users.first_name, users.last_name, users.display_name AS username, posts.caption
+                                            users.first_name, users.last_name, users.display_name AS username, posts.caption, posts.views
                                     FROM posts
                                     LEFT JOIN photos
                                     ON posts.image_id = photos.id
@@ -170,6 +172,14 @@ require "header.php";
 
                     while($article_row = mysqli_fetch_array($article_result)) {
 
+                        // view counter start
+                        $update_views_query = " UPDATE posts 
+                                                SET views = " . ( $article_row["views"] += 1 ) . "
+                                                WHERE id = " . $article_row["id"];
+                        mysqli_query($conn, $update_views_query);
+
+                        
+
                         // print_r($article_row); // this will tell me the data i have in article row
                         ?>
 
@@ -213,7 +223,7 @@ require "header.php";
                             <div class="row click-post">
                             
                                 <i class="far fa-eye fa-3x ml-5"></i>
-                                <h5 class="mt-3 ml-4">Views</h5>
+                                <h5 class="mt-3 ml-4"><?= $article_row["views"]; ?> Views</h5>
 
                                 <div class="ml-auto">
                                     <div class="row mr-1">
@@ -268,7 +278,7 @@ require "header.php";
 
                                             <input type="hidden" name="post_id" value="<?= $article_row["id"] ?>">
 
-                                            <input type="text" name="comment" class="form-control comment-input" placeholder="Leave a comment">
+                                            <input type="text" name="comment" class="form-control comment-input in_index" placeholder="Leave a comment">
                                         
                                             <div class="input-group-append">
                                                 <button class="btn btn-warning px-5 commentButton" type="submit" name="action" data-comments="" value="share_comment">Share</button>
@@ -277,7 +287,7 @@ require "header.php";
                                     </div>
                                         
                                         <div>
-                                            <button class="showComments btn btn-outline-dark rounded-pill ml-5 px-5">View comments</button>
+                                            <button class="showComments btn btn-outline-dark rounded-pill ml-5 px-5" data-comment_block="#comment_block<?=$article_row['id']?>">View comments</button>
                                         </div>
                                 </div>
                             </form>
@@ -286,14 +296,40 @@ require "header.php";
 
                         </div> <!-- on click container -->
 
+                        
+
                       
 
                         
                         <?php
+                        
                     }
                 } else {
                     echo mysqli_error($conn);
                 }
+
+                echo "<nav aria-label='Page navigation'><ul class='pagination'>";
+
+                    $get_search = ($search_query) ? "&search=" . $search_query : "";
+
+                    if($current_page > 1) {
+                        echo "<li class='page-item'><a class='page-link' href='/index.php?page=" . ($current_page - 1) . "$get_search'>Show Newer</a></li>";
+                    }
+
+
+                    for ($i = 1; $i <= $page_count; $i++) {
+                        
+                        echo "<li class='page-item";
+
+                        if($current_page == $i) echo " active";
+                        echo "'><a class='page-link' href='/index.php?page=$i" . $get_search . "'>$i</a></li>";
+
+                    }
+                    if ( $current_page < $page_count ) {
+                        echo "<li class='page-item mb-4'><a class='page-link' href='/index.php?page=" . ($current_page + 1) . "$get_search'>Show Older</a></li>";
+                    }
+
+                    echo "</ul></nav>";
 
                 ?>
                 </div>
