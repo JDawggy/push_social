@@ -14,11 +14,16 @@ $user_query = " SELECT users.*, provinces.name AS province_name, photos.url AS p
 // echo $user_query;
 if ( $user_request = mysqli_query($conn, $user_query) ) :
    
-
+    
     while ($user_row = mysqli_fetch_array($user_request)) :
-    
-    
-        // print_r($user_row);
+        
+        
+        
+        // echo "<pre>";
+        // print_r($user_row)
+        
+        
+        
 
 ?>
 
@@ -64,14 +69,30 @@ if ( $user_request = mysqli_query($conn, $user_query) ) :
     
                 </form>
             </div>
-    
+
             
             <div class="navbar col-4" id="navbarSupportedContent">
                 
                 <ul class="navbar-nav ml-auto mr-2">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-user fa-2x"></i>
+                        <?php
+
+                        if (isset($user_row["profile_pic"])) {
+                            ?>
+                            <div class="header_pic mt-1">
+
+                                <img src="<?= $user_row["profile_pic"] ?>" alt="">
+
+                            </div>
+                            <?php
+                        } else {
+                            ?>
+                            <i class="fas fa-user fa-2x"></i>
+                            <?php
+                        }
+
+                        ?>
                     
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
