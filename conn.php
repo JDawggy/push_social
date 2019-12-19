@@ -10,7 +10,7 @@ if(!isset($_SESSION)) { // Starts a session to pass session variables
 
 // $conn = mysqli_connect("localhost", "root", "root", "push");
 
-if( $_SERVER["SERVER_NAME"] == "justjordan.ca") {
+if( $_SERVER["SERVER_NAME"] == "justjordan.ca" || $_SERVER["SERVER_NAME"] == "www.justjordan.ca") {
     // PRODUCTION - connects to plesk database
     
                         // localhost, database username, password, database name

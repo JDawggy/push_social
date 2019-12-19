@@ -14,7 +14,7 @@ include_once("header.php");
 
 <div class="container">
     
-    <div class="col-12"><h1>New Post</h1></div>
+    <div class="col-12"><h1 class="mt-3 mb-2">New Post</h1></div>
 
     <?php include($_SERVER["DOCUMENT_ROOT"] . "/includes/error_check.php"); ?>
     <form action="/actions/create_post_action.php" method="post" enctype="multipart/form-data">
@@ -31,11 +31,11 @@ include_once("header.php");
         </div>
 
         <div class="form-group">
-            <img class="post-preview imageDisplay" src="/images/placeholder.png" onclick="uploadPost()" alt="" id="postDisplay"> <br>
+            <img class="post-preview imageDisplay mb-3" src="/images/placeholder.png" onclick="uploadPost()" alt="" id="postDisplay"> <br>
 
             <label class="btn btn-default btn-file mx-auto">
 
-                <span class="upload-photo">Upload New Photo</span> 
+                <span class="upload-photo mt-3">Upload New Photo</span> 
                 <input class="in_index" type="file" name="uploaded_image"  onchange="displayImage(this)" id="uploadedImage" style="display: none;">
             </label>
            

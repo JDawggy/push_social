@@ -20,7 +20,7 @@ function displayImage(e) {
 
 // edit_porfile.php
 
-function uploadPost() {
+function uploadProfile() {
     document.querySelector('#uploadedProfile').click();
 }
 
@@ -30,6 +30,24 @@ function displayProfile(e) {
 
         reader.onload = function(e) {
             document.querySelector('#profileDisplay').setAttribute('src', e.target.result);
+        }
+        reader.readAsDataURL(e.files[0]);
+    }
+}
+
+
+// if profile picture has been previously set on edit_profile.php this will display the new one over that one when uploaded
+
+function uploadProfile1() {
+    document.querySelector('#uploadedProfile1').click();
+}
+
+function displayProfile(e) {
+    if (e.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+            document.querySelector('#profileDisplay1').setAttribute('src', e.target.result);
         }
         reader.readAsDataURL(e.files[0]);
     }
@@ -100,6 +118,22 @@ $( ".showComments" ).click(function( e ) {
 
 });
 
+
+// $( ".shareComment" ).click(function(e)  {
+//     e.preventDefault();
+// });
+
+
+
+// When deleting a post pop up warning 
+
+$('a#deletePost').on('click', function() {
+    var choice = confirm('You are trying to permanently delete this post! Are you sure?');
+    if(choice === true) {
+        return true;
+    }
+    return false;
+});
 
 
 

@@ -49,12 +49,15 @@ if ( $user_request = mysqli_query($conn, $user_query) ) :
 
 
             <div class="collapse navbar-collapse justify-content-center">
-                <form class="form-inline col-4 d-flex justify-content-center">
+                <form class="form-inline col-4 d-flex justify-content-center" method="GET" action="/search_users.php">
 
                     <div class="form-group mt-3">
                         <div class="input-icons">
+
                             <i class="fas fa-search"></i>
-                            <input class="form-control mr-sm-2 rounded-pill in_index" type="search" placeholder="Search" aria-label="Search">
+
+                            <input class="form-control mr-sm-2 rounded-pill in_index" name="search" value="<?= (isset($_GET["search"]) ? $_GET["search"] : "" ) ?>" type="search" placeholder="Search Users" aria-label="Search">
+
                         </div>
                         
                     </div>

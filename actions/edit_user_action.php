@@ -27,13 +27,13 @@ if( isset($_POST["action"]) && $_POST["action"] == "update" ) :
 
                              // This is where im getting the error you do not have permission to do that
 
-        $user_id =          $_POST["user_id"];
-        $first_name =       $_POST["first_name"];
-        $last_name =        $_POST["last_name"];
-        $city =             $_POST["city"];
-        $email =            $_POST["email"];
-        $bio =              $_POST["bio"];
-        $display_name =     $_POST["display_name"];
+        $user_id =          htmlspecialchars($_POST["user_id"], ENT_QUOTES);
+        $first_name =       htmlspecialchars($_POST["first_name"], ENT_QUOTES);
+        $last_name =        htmlspecialchars($_POST["last_name"], ENT_QUOTES);
+        $city =             htmlspecialchars($_POST["city"], ENT_QUOTES);
+        $email =            htmlspecialchars($_POST["email"], ENT_QUOTES);
+        $bio =              htmlspecialchars($_POST["bio"], ENT_QUOTES);
+        $display_name =     htmlspecialchars($_POST["display_name"], ENT_QUOTES);
 
         $profile_photo_id = NULL;
 

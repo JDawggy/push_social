@@ -40,7 +40,7 @@ if ( $user_request = mysqli_query($conn, $user_query) ) :
 
                         <a class="decor-none" href="index.php" id="" role="button">
 
-                            <i class="fas fa-undo fa-2x"></i>
+                            <i class="fas fa-chevron-left fa-2x"></i>
 
                         </a>
 
@@ -95,21 +95,26 @@ if ( $user_request = mysqli_query($conn, $user_query) ) :
                                 // echo "<pre>";
                                 // print_r($user_row);
 
+
+                                
+
+
                                 if ( !isset($user_row["profile_photo_id"]) ) {
+                                    
                                     ?>
-                                    <span class="pl-1 mb-4 user-center fa-stack fa-2x">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fas fa-user fa-stack-1x fa-inverse"></i>
-                                    </span>
+
+                                    <div class="circular-landscape mx-auto mb-5">
+                                        <img class="mx-auto mb-5" id="profileDisplay" onclick="uploadProfile()" src="/images/NoProfilePhoto.jpg" alt="">
+                                    </div>
+                                    
                                     <?php
 
                                 } else {
                                     
                                     ?>
 
-
                                     <div class="circular-landscape mx-auto mb-5">
-                                        <img class="mx-auto mb-5" id="profileDisplay" onclick="uploadProfile()" src="<?= $user_row["profile_pic"]; ?>" alt="">
+                                        <img class="mx-auto mb-5" id="profileDisplay1" onclick="uploadProfile1()" src="<?= $user_row["profile_pic"]; ?>" alt="">
                                     </div>
                                     
                                     <?php
@@ -124,7 +129,7 @@ if ( $user_request = mysqli_query($conn, $user_query) ) :
 
                                 <label class="btn btn-default btn-file mx-auto">
                                      <span class="upload-photo">Upload Profile Photo</span> 
-                                     <input class="profile_in_feilds" type="file" name="profile_photo" onchange="displayProfile(this)" id="profile_photo" style="display: none;">
+                                     <input class="profile_in_feilds" type="file" name="profile_photo" onchange="displayProfile(this)" id="uploadedProfile" style="display: none;">
                                      
                                 </label>
 

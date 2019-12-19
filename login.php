@@ -64,12 +64,12 @@ if( isset( $_POST["action"]) && $_POST["action"] == "login" ) :
 
 elseif( isset( $_POST["action"]) && $_POST["action"] == "signup" ) :
 
-        $first_name = $_POST["first_name"];
-        $last_name = $_POST["last_name"];
-        $email = $_POST["email"];
+        $first_name = htmlspecialchars($_POST["first_name"], ENT_QUOTES);
+        $last_name = htmlspecialchars($_POST["last_name"], ENT_QUOTES);
+        $email = htmlspecialchars($_POST["email"], ENT_QUOTES);
         $password = md5($_POST["password"]);
         $password2 = md5($_POST["password2"]);
-        $city = $_POST["city"];
+        $city = htmlspecialchars($_POST["city"], ENT_QUOTES);
         $province_id = ( isset($_POST["province"]) ) ? $_POST["province"] : 0;
         $date_created = date("Y-m-d H:i:s");
 
@@ -143,7 +143,10 @@ endif;
 
 if( !empty($errors) ) {
 
-    $query = http_build_query( array("errors" => $errors) );
+    $query_array = array("errors" => $errors);
+    $query_array = array_merge($query_array, $_REQUEST);
+
+    $query = http_build_query( $query_array );
 
     header("Location: " . strtok($_SERVER["HTTP_REFERER"], "?") . "?" . $query);
     

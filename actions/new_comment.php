@@ -8,6 +8,8 @@ if(!isset($_SESSION)) { // Starts a session to pass session variables
     session_start(); 
 }  
 
+
+
 // Get current user by session id if they are logged in they can leave comments
 if ( isset($_POST["action"]) && ( $_POST["action"] == "share_comment" ) && ( $_POST["comment"] != "") ) :
 
@@ -15,7 +17,7 @@ if ( isset($_POST["action"]) && ( $_POST["action"] == "share_comment" ) && ( $_P
     if( isset($_SESSION["user_id"]) && ($_SESSION["role"] < 3) ):
 
         $user_id = $_SESSION["user_id"];
-        $comment = $_POST["comment"];
+        $comment = htmlspecialchars($_POST["comment"], ENT_QUOTES);
         $post_id = $_POST["post_id"];
 
         //if the comment feild isnt empty their comment can be uploaded to the database
@@ -26,7 +28,7 @@ if ( isset($_POST["action"]) && ( $_POST["action"] == "share_comment" ) && ( $_P
                                 
             if( mysqli_query($conn, $comment_query) ) {
 
-                header( "Location: http://" . $_SERVER["SERVER_NAME"] );
+                header( "Location: http://" . $_SERVER["SERVER_NAME"] . "/user_posts.php#thisPost" . $post_id );
                 
             } else {
                 $errors[] = "Something sader has happened " . mysqli_error($conn);

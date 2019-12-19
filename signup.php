@@ -45,7 +45,7 @@
                             <div class="form-group col-md-6"> 
                                 <div class="input-icons">
                                     <i class="fas fa-user"></i>
-                                    <input class="rounded-pill form-control in_log" type="text" name="first_name" placeholder="First Name" value="" required>                
+                                    <input class="rounded-pill form-control in_log" type="text" name="first_name" placeholder="First Name" value="<?=( isset($_REQUEST["first_name"]) ) ? $_REQUEST["first_name"] : "";?>" required>                
                                 </div>
                             </div>
             
@@ -54,7 +54,7 @@
                             <div class="form-group col-md-6"> 
                                 <div class="input-icons">
                                     <i class="fas fa-user"></i>
-                                    <input class="rounded-pill form-control in_log" type="text" name="last_name" placeholder="Last Name" value="" required>
+                                    <input class="rounded-pill form-control in_log" type="text" name="last_name" placeholder="Last Name" value="<?=( isset($_REQUEST["last_name"]) ) ? $_REQUEST["last_name"] : "";?>" required>
                                 </div>
                             </div> <!-- end of form group -->
                             </div> <!-- end of row -->
@@ -68,7 +68,7 @@
                             <div class="form-group col-md-6"> 
                                 <div class="input-icons">
                                     <i class="fas fa-envelope"></i>
-                                    <input class="rounded-pill form-control in_log" type="email" name="email" placeholder="Email" value="" required>                 
+                                    <input class="rounded-pill form-control in_log" type="email" name="email" placeholder="Email" value="<?=( isset($_REQUEST["email"]) ) ? $_REQUEST["email"] : "";?>" required>                 
                                 </div>
                             </div>
             
@@ -77,7 +77,7 @@
                             <div class="form-group col-md-6"> 
                                 <div class="input-icons">
                                     <i class="fas fa-envelope"></i>
-                                    <input class="rounded-pill form-control in_log" type="email" name="email2" placeholder="Confirm Email" value="" required>  
+                                    <input class="rounded-pill form-control in_log" type="email" name="email2" placeholder="Confirm Email" value="<?=( isset($_REQUEST["email2"]) ) ? $_REQUEST["email2"] : "";?>" required>  
                                 </div>               
                             </div> <!-- end of form group -->
                             </div> <!-- end of row -->
