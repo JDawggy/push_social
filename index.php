@@ -89,7 +89,7 @@ if(!isset($_SESSION["user_id"])){
                     ?>
 
 
-                    <div class="clickContainer"> 
+                    <div id="thisPost<?=$article_row["id"]?>" class="clickContainer"> 
 
                         <hr class="mt-3">
 
@@ -175,7 +175,7 @@ if(!isset($_SESSION["user_id"])){
 
                                 
                                                 <!-- l = weekday        F = Month      d = month number -->
-                                    <h5 class="mt-3 ml-auto mr-5"><?= date("l F d", strtotime($article_row["date_created"])); ?></h5>
+                                    <h5 class="mt-3 ml-auto mr-5"><?= date("l, F d", strtotime($article_row["date_created"])); ?></h5>
                                     
                                 </div> <!-- row -->
                             </div> <!-- ml-auto -->
@@ -230,7 +230,7 @@ if(!isset($_SESSION["user_id"])){
 
                                         <input type="text" name="comment" class="form-control comment-input in_index" placeholder="Leave a comment">
     
-                                        <div class="input-group-append">
+                                        <div class="input-group-addon">
                                             <button class="btn btn-warning px-5 commentButton shareComment" type="submit" name="action" data-comments="" value="share_comment">Share</button>
                                         </div>
 

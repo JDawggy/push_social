@@ -28,7 +28,7 @@ if ( isset($_POST["action"]) && ( $_POST["action"] == "share_comment" ) && ( $_P
                                 
             if( mysqli_query($conn, $comment_query) ) {
 
-                header( "Location: http://" . $_SERVER["SERVER_NAME"] . "/user_posts.php#thisPost" . $post_id );
+                header( "Location: http://" . $_SERVER["SERVER_NAME"] . "/index.php#thisPost" . $post_id );
                 
             } else {
                 $errors[] = "Something sader has happened " . mysqli_error($conn);

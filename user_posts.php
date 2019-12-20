@@ -475,7 +475,7 @@ if(!isset($_SESSION["user_id"])){
                         // print_r($article_row); // this will tell me the data i have in article row
                         ?>
   
-                        <div id="thisPost<?=$article_row["id"]?>" class="clickContainer"> 
+                        <div class="clickContainer"> 
 
                             <hr class="mt-3">
 
